@@ -1,0 +1,13 @@
+---
+- name: Deploy and setup OpenVPN server
+  hosts: vpn-server
+  become: true
+  vars:
+    openvpn_download_clients: true
+    openvpn_download_dir: /Users/svic/nure/last-project/
+    openvpn_clients:
+      - raspberrypi
+    internal_ip: 10.128.0.4
+    
+  roles:
+    - openvpn-server

@@ -1,0 +1,7 @@
+---
+
+- name: Ensure OpenVPN is started
+  service:
+    name: "{{ openvpn_service }}@server"
+    state: started
+    enabled: true

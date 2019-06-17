@@ -1,0 +1,10 @@
+---
+- name: Deploy and setup OpenVPN client
+  hosts: rasp
+  gather_facts: true
+  become: true
+
+  tasks:
+
+    - name:
+      ping:
