@@ -1,0 +1,13 @@
+---
+
+- name: Install openVPN
+  apt: name=openvpn state=present
+
+- name: Copy client config
+  copy: 
+    src: "{{ client_config_path }}"
+    dest: "{{ openvpn_etcdir }}"
+    owner: root
+    group: root
+    mode: 0600
+  notify: [openvpn restart]

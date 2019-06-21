@@ -8,6 +8,10 @@
     openvpn_clients:
       - raspberrypi
     internal_ip: 10.128.0.4
+    openvpn_dns_servers: 
+      - 8.8.8.8
+      - 8.8.4.4
+    
     
   roles:
     - openvpn-server

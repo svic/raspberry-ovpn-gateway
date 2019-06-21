@@ -1,10 +1,16 @@
 ---
-- name: Deploy and setup OpenVPN client
+
+- name: Setup Raspberry Gateway
   hosts: rasp
   gather_facts: true
   become: true
+  vars: 
+    ip_prefix: 192.168.220.
+    ssid: PiHotSpot
+    wpa_passphrase: raspberry
+    channel: 6
+    openvpn_etcdir: /etc/openvpn
+    client_config_path: raspberrypi.ovpn
 
-  tasks:
-
-    - name:
-      ping:
+  roles:
+    - openvpn-client

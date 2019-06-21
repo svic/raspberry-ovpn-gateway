@@ -1,0 +1,4 @@
+---
+
+openvpn_etcdir: /etc/openvpn
+client_config_path: raspberrypi.ovpn
